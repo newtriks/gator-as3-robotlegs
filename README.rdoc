@@ -1,6 +1,13 @@
 = gator-as3-robotlegs
 
-Description goes here.
+Add this to your gator project file to use the generators:
+    require "gator/as3/robotlegs/generators"
+
+For FlexUnit4 test generators add:
+    require "gator/as3/robotlegs/generators/test/flexunit4"
+
+For ASUnit4 test generators add:
+    require "gator/as3/robotlegs/generators/test/asunit4"
 
 == Contributing to gator-as3-robotlegs
  
