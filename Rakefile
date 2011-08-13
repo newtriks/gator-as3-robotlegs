@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "gator-as3-robotlegs"
-  gem.homepage = "http://github.com/devboy/gator-as3-robotlegs"
+  gem.homepage = "http://github.com/newtriks/gator-as3-robotlegs"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{generators for robotlegs}
+  gem.description = %Q{generators for robotlegs}
   gem.email = "dominic.graefen@gmail.com"
   gem.authors = ["devboy"]
   # dependencies defined in Gemfile
