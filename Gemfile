@@ -12,4 +12,6 @@ group :development do
   gem "rcov", ">= 0"
   gem "gator", "~> 0.0.17.pre"
   gem "gator-as3", "~> 0.0.5.pre"
+  gem "rspec", "~> 2.3.0"
+  gem "ci_reporter", "~> 1.6.5"
 end

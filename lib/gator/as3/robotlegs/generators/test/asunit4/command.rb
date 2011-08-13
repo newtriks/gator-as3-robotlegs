@@ -1,6 +1,6 @@
 module Gator
   module AS3
-    module Robotlegs
+    module RobotLegs
       module ASUnit4
 
         class CommandTestGenerator < Task

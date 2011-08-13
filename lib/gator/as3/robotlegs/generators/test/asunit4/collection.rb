@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/command'
 
 module Gator
   module AS3
-    module Robotlegs
+    module RobotLegs
       module ASUnit4
 
         class TestGeneratorCollection < Gator::Command
