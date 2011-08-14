@@ -6,7 +6,7 @@ module Gator
         class CommandTestGenerator < Task
           include Gator::Project
 
-          define :command => "klass",
+          define :command => "command",
                  :usage => "generate as3 robotlegs test command CLASS_NAME", :description => "Creates ASUnit4 command test."
 
           argument :classname
