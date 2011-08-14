@@ -36,8 +36,8 @@ module Gator
         end
 
         def generate_test
-          return unless options[:test]
-          invoke parent.get_subcommand("test", "mediator")
+          #return unless options[:test]
+          #invoke parent.get_subcommand("test", "mediator")
         end
 
         no_tasks {

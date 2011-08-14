@@ -27,7 +27,7 @@ module Gator
 
           def generate_implementation
             return unless options[:impl]
-            invoke parent.parent.get_subcommand("command")
+            invoke resolve_subcommand(["robotlegs","command"],["as3","klass"])
           end
 
           no_tasks {
