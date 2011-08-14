@@ -26,7 +26,7 @@ module Gator
 
         def generate_test
           return unless options[:test]
-          invoke parent.parent.get_subcommand("test", "model")
+          invoke(parent.get_subcommand("test", "model"), [])
         end
 
         no_tasks {
