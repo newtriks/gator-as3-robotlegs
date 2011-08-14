@@ -1,18 +1,18 @@
 package <%= package_name %>
-{	
-	import org.robotlegs.mvcs.Mediator;
-	
-	public class <%= class_name %> extends Mediator
-	{				
-		override public function onRegister():void
-		{
-			// eventMap.mapListener(YOUR VIEW COMPONENT, YOUR EVENT, YOUR HANDLER);
-		}
-		
-		override public function onRemove():void
-		{
-			// eventMap.unmapListeners();
-			super.onRemove();
-		}
-	}
+{
+import org.robotlegs.mvcs.Mediator;
+
+public class <%= class_name %> extends Mediator
+{
+override public function onRegister():void
+{
+// eventMap.mapListener(YOUR VIEW COMPONENT, YOUR EVENT, YOUR HANDLER);
+}
+
+override public function onRemove():void
+{
+// eventMap.unmapListeners();
+super.onRemove();
+}
+}
 }

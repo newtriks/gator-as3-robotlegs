@@ -13,14 +13,14 @@ module Gator
 
         define :command => "robotlegs", :short => "rl",
                :usage => "generate as3 robotlegs GENERATOR", :description => "Generators for RobotLegs"
-               
+
         register_subcommand ContextGenerator
         register_subcommand CommandGenerator
-        register_subcommand ModelGenerator 
-        register_subcommand ServiceGenerator 
+        register_subcommand ModelGenerator
+        register_subcommand ServiceGenerator
         register_subcommand MediatorGenerator
         register_subcommand ViewWithMediatorGenerator
-        
+
       end
     end
   end
