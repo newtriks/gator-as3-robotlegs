@@ -1,5 +1,7 @@
 package <%= package_name %>
 {
+	import asunit.asserts.*;
+	
 	import <%= view_package_name %>.<%= view_class_name %>;
 	
 	public class <%= class_name %>
