@@ -1,0 +1,44 @@
+package <%= package_name %>
+{
+	import <%= view_package_name %>.<%= view_class_name %>;
+	
+	public class <%= class_name %>
+	{
+		private var instance:<%= instance_name %>;
+		
+		[Before]
+		public function setUp():void
+		{
+		    instance=new <%= instance_name %>();
+			instance.view=new <%= view_class_name %>();
+			instance.setViewComponent(instance.view);
+		    instance.eventDispatcher=new EventDispatcher();
+			instance.onRegister();
+		}
+		
+		[After]
+		public function tearDown():void
+		{
+			instance.onRemove();
+			instance=null;
+    	}
+
+		[Test]
+		public function should_be_instantiated():void
+		{
+			assertTrue(instance is <%= instance_name %>);
+		}
+		
+		[Test]
+		public function view_should_be_instantiated():void
+		{
+			assertTrue(instance.view is <%= view_class_name %>);
+		}
+
+		[Test]
+		public function should_fail():void
+		{
+		    assertTrue(false);
+		}		
+	}
+}
