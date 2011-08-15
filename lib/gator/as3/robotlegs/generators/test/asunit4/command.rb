@@ -20,7 +20,7 @@ module Gator
           def generate
             src = project.path(:source, :test, :as3)
             @package_name, @class_name = split_class_name(classname)
-            @class_name += "Test"
+            @class_name += "CommandTest"
             src = File.join(src, @package_name.split(".").join(File::SEPARATOR)) unless @package_name == ""
             template "command.as.tt", File.join(src, "#{@class_name}.as")
           end
@@ -38,6 +38,10 @@ module Gator
 
             def class_name
               @class_name
+            end
+            
+            def instance_name
+              @class_name.chomp("Test")
             end
 
           }
