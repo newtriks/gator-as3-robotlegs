@@ -27,6 +27,7 @@ module Gator
           end
 
           def generate_implementation
+            invoke resolve_subcommand(["test","suite"],["as3","klass"]), [classname]
             return unless options[:impl]
             invoke resolve_subcommand(["robotlegs","view"],["as3","klass"])
           end
