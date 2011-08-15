@@ -1,35 +1,35 @@
 package <%= package_name %>
 {
-import flash.display.DisplayObjectContainer;
+	import flash.display.DisplayObjectContainer;
 
-import org.robotlegs.mvcs.Context;
-import org.robotlegs.base.ContextEvent;
+	import org.robotlegs.mvcs.Context;
+	import org.robotlegs.base.ContextEvent;
 
-public class <%= class_name %> extends Context
-{
-public function <%= class_name %>Context(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
-{
-super(contextView,autoStartup);
-}
+	public class <%= class_name %> extends Context
+	{
+		public function <%= class_name %>Context(contextView:DisplayObjectContainer=null, autoStartup:Boolean=true)
+		{
+			super(contextView,autoStartup);
+		}
 
-override public function startup():void
-{
-//Service
-//injector.mapSingleton(YOUR SERVICE);
+		override public function startup():void
+		{
+			//Service
+			//injector.mapSingleton(YOUR SERVICE);
 
-//Model
-//injector.mapSingleton(YOUR PROXY);
+			//Model
+			//injector.mapSingleton(YOUR PROXY);
 
-//Controller
-//commandMap.mapEvent( YOUR START UP COMMAND, ContextEvent.STARTUP, ContextEvent, true );
+			//Controller
+			//commandMap.mapEvent( YOUR START UP COMMAND, ContextEvent.STARTUP, ContextEvent, true );
 
-//View
-//mediatorMap.mapView(YOUR VIEW, YOUR MEDIATOR);
+			//View
+			//mediatorMap.mapView(YOUR VIEW, YOUR MEDIATOR);
 
-//Dispatch a start up event
-dispatchEvent( new ContextEvent( ContextEvent.STARTUP ) );
+			//Dispatch a start up event
+			dispatchEvent( new ContextEvent( ContextEvent.STARTUP ) );
 
-super.startup();
-}
-}
+			super.startup();
+		}
+	}
 }
