@@ -1,0 +1,41 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.0.0)
+    ci_reporter (1.6.5)
+      builder (>= 2.1.2)
+    diff-lcs (1.1.2)
+    gator (0.0.20.pre)
+      thor (~> 0.14.6)
+    gator-as3 (0.0.7.pre)
+      gator (~> 0.0.20.pre)
+    git (1.2.5)
+    jeweler (1.6.4)
+      bundler (~> 1.0)
+      git (>= 1.2.5)
+      rake
+    rake (0.9.2)
+    rcov (0.9.10)
+    rspec (2.3.0)
+      rspec-core (~> 2.3.0)
+      rspec-expectations (~> 2.3.0)
+      rspec-mocks (~> 2.3.0)
+    rspec-core (2.3.1)
+    rspec-expectations (2.3.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.3.0)
+    shoulda (2.11.3)
+    thor (0.14.6)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.0.0)
+  ci_reporter (~> 1.6.5)
+  gator (~> 0.0.20.pre)
+  gator-as3 (~> 0.0.7.pre)
+  jeweler (~> 1.6.4)
+  rcov
+  rspec (~> 2.3.0)
+  shoulda

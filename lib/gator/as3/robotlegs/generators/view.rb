@@ -2,11 +2,11 @@ module Gator
   module AS3
     module RobotLegs
 
-      class MediatorGenerator < Task
+      class ViewGenerator < Task
         include Gator::Project
 
-        define :command => "mediator",
-               :usage => "generate as3 rl mediator CLASS_NAME", :description => "Creates RobotLegs Mediator class."
+        define :command => "view",
+               :usage => "generate as3 view CLASS_NAME", :description => "Creates AS3 View class."
 
         argument :classname
 
@@ -19,17 +19,14 @@ module Gator
         def generate
           src = project.path(:source, :main, :as3)
           @package_name, @class_name = split_class_name(classname)
-          @view_package_name = @package_name.dup << ".components"
-          @view_class_name = @class_name.dup
-          @class_name += "Mediator"      
-          @package_name += ".mediators"    
+          @package_name += ".components"
           src = File.join(src, @package_name.split(".").join(File::SEPARATOR)) unless @package_name == ""
-          template "mediator.as.tt", File.join(src, "#{@class_name}.as")
+          template "view.as.tt", File.join(src, "#{@class_name}.as")
         end
 
         def generate_test
           return unless options[:test]
-          invoke resolve_subcommand(["test", "mediator"],["test","klass"])
+          invoke resolve_subcommand(["test", "view"],["test","klass"])
         end
 
         no_tasks {
@@ -41,15 +38,7 @@ module Gator
           def class_name
             @class_name
           end
-          
-          def view_package_name
-            @view_package_name
-          end
-            
-          def view_class_name
-            @view_class_name
-          end
-          
+
         }
 
         protected

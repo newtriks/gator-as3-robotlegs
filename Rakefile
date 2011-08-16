@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "gator-as3-robotlegs"
   gem.homepage = "http://github.com/newtriks/gator-as3-robotlegs"
   gem.license = "MIT"
-  gem.summary = %Q{generators for robotlegs}
-  gem.description = %Q{generators for robotlegs}
-  gem.email = "dominic.graefen@gmail.com"
-  gem.authors = ["devboy"]
+  gem.summary = %Q{Gator Generators for RobotLegs}
+  gem.description = %Q{Gator Generators for RobotLegs}
+  gem.email = "simon@newtriks.com"
+  gem.authors = ["devboy","newtriks"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

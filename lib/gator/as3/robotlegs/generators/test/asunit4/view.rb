@@ -3,11 +3,11 @@ module Gator
     module RobotLegs
       module ASUnit4
 
-        class CommandTestGenerator < Task
+        class ViewTestGenerator < Task
           include Gator::Project
 
-          define :command => "command",
-                 :usage => "generate as3 robotlegs test command CLASS_NAME", :description => "Creates ASUnit4 command test."
+          define :command => "view",
+                 :usage => "generate as3 robotlegs view test CLASS_NAME", :description => "Creates ASUnit4 view test."
 
           argument :classname
 
@@ -20,15 +20,16 @@ module Gator
           def generate
             src = project.path(:source, :test, :as3)
             @package_name, @class_name = split_class_name(classname)
-            @class_name += "CommandTest"
+            @class_name += "Test"
+            @package_name += ".components"
             src = File.join(src, @package_name.split(".").join(File::SEPARATOR)) unless @package_name == ""
-            template "command.as.tt", File.join(src, "#{@class_name}.as")
+            template "view.as.tt", File.join(src, "#{@class_name}.as")
           end
 
           def generate_implementation
             invoke resolve_subcommand(["test","suite"],["as3","klass"]), [classname]
             return unless options[:impl]
-            invoke resolve_subcommand(["robotlegs","command"],["as3","klass"])
+            invoke resolve_subcommand(["robotlegs","view"],["as3","klass"])
           end
 
           no_tasks {
