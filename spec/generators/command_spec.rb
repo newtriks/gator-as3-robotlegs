@@ -5,7 +5,7 @@ describe Gator::AS3::RobotLegs::CommandGenerator do
      clean
      gator('dummy.FooFunk')
   end
-      
+
   it 'should create the expected files' do
     file('dummy/FooFunk.as').should exist
   end
