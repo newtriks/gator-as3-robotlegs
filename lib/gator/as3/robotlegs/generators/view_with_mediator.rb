@@ -2,9 +2,7 @@ module Gator
   module AS3
     module RobotLegs
 
-      class ViewWithMediatorGenerator < Gator::AS3::KlassGenerator
-        include Gator::Project
-        include WithRobotLegsTemplates
+      class ViewWithMediatorGenerator < Gator::Generator
 
         define :command => "view_with_mediator",
                :usage => "generate as3 rl view_with_mediator class CLASS_NAME", :description => "Creates RobotLegs View and Mediator classes."
