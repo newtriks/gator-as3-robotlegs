@@ -5,6 +5,7 @@ module Gator
       class ModelGenerator < Gator::AS3::KlassGenerator
         include Gator::Project
         include WithRobotLegsTemplates
+        include ActAsRobotLegsKlassGenerator
 
         define :command => "model",
                :usage => "generate as3 rl model CLASS_NAME", :description => "Creates RobotLegs Model class."

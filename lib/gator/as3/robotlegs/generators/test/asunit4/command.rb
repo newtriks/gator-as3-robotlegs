@@ -6,6 +6,7 @@ module Gator
         class CommandTestGenerator < Gator::AS3::TestGenerator
                   include Gator::Project
                   include WithRobotLegsTemplates
+                  include ActAsRobotLegsTestGenerator
 
           define :command => "command",
                  :usage => "generate as3 robotlegs test command CLASS_NAME", :description => "Creates ASUnit4 command test."
