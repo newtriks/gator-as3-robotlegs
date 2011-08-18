@@ -16,7 +16,7 @@ module Gator
 
           def generate
             @package_name += ".components" unless @package_name == ""
-            @class_name += "ViewTest"
+            @class_name += "Test"
             super
           end
 

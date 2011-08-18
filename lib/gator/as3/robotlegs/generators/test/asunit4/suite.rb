@@ -3,38 +3,30 @@ module Gator
     module RobotLegs
       module ASUnit4
 
-        class SuiteGenerator < Task
-          include Gator::Project
+        class SuiteGenerator < Gator::AS3::TestGenerator
+                  include Gator::Project
+                  include WithRobotLegsTemplates
 
           define :command => "suite",
                  :usage => "generate as3 asunit4 test suite CLASS_NAME", :description => "Creates ASUnit4 suite."
           
-          argument :classname
-          
-          def self.source_root
-            File.dirname __FILE__
+          def template_file
+            "as3/robotlegs/test/asunit4/suite.as.tt"
           end
 
           def generate
-            src = project.path(:source, :test, :as3)
-            @package_name = src.dup
-            @class_name = "AllTests"
-            template "suite.as.tt", File.join(src, "#{@class_name}.as")
+            @package_name += ".components" unless @package_name == ""
+            @class_name += "SuiteTest"
+            super
           end
 
           no_tasks {
 
-            def package_name
-              @package_name
+            def instance_name
+              @class_name.chomp("Test")
             end
 
-            def class_name
-              @class_name
-            end
-
-          }
-
-          protected
+           }
 
         end
       end
