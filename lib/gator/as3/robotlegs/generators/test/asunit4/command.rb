@@ -16,7 +16,6 @@ module Gator
           end
 
           def generate
-            @package_name += ".components" unless @package_name == ""
             @class_name += "CommandTest"
             super
           end
