@@ -5,6 +5,7 @@ module Gator
       class MediatorGenerator < Gator::AS3::KlassGenerator
         include Gator::Project
         include WithRobotLegsTemplates
+        include ActAsRobotLegsKlassGenerator
 
         define :command => "mediator",
                :usage => "generate as3 rl mediator CLASS_NAME", :description => "Creates RobotLegs Mediator class."

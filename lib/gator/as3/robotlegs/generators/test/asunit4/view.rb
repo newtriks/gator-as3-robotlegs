@@ -6,6 +6,7 @@ module Gator
         class ViewTestGenerator < Gator::AS3::TestGenerator
           include Gator::Project
           include WithRobotLegsTemplates
+          include ActAsRobotLegsKlassGenerator
 
           define :command => "view",
                  :usage => "generate as3 robotlegs view test CLASS_NAME", :description => "Creates ASUnit4 view test."

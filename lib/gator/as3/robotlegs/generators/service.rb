@@ -5,6 +5,7 @@ module Gator
       class ServiceGenerator < Gator::AS3::KlassGenerator
         include Gator::Project
         include WithRobotLegsTemplates
+        include ActAsRobotLegsKlassGenerator
 
         define :command => "service",
                :usage => "generate as3 rl service CLASS_NAME", :description => "Creates RobotLegs Service class."

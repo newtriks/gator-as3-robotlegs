@@ -5,6 +5,7 @@ module Gator
       class ViewGenerator < Gator::AS3::KlassGenerator
         include Gator::Project
         include WithRobotLegsTemplates
+        include ActAsRobotLegsKlassGenerator
 
         define :command => "view",
                :usage => "generate as3 view CLASS_NAME", :description => "Creates AS3 View class."
