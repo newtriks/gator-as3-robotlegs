@@ -18,6 +18,11 @@ module Gator
          @class_name += "Service"
          super
         end
+        
+        def generate_test
+          return unless options[:test]
+          invoke resolve_subcommand(generate_test_command_fallback), ["#{package_and_class}Service"]
+        end
 
       end
 
