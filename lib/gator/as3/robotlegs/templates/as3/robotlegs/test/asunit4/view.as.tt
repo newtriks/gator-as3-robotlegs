@@ -23,7 +23,6 @@ package <%= package_name %>
 		{
 		    context.removeChild(instance);
 		    instance=null;
-		    context=null;
 		}
 
 		[Test]
