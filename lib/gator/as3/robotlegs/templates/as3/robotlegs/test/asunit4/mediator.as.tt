@@ -18,6 +18,7 @@ package <%= package_name %>
 		{
 		    instance=new <%= instance_name %>();
 			instance.view=new <%= view_class_name %>();
+			instance.view.parentInjector=new SwiftSuspendersInjector();
 			instance.setViewComponent(instance.view);
 		    instance.eventDispatcher=new EventDispatcher();
 			instance.onRegister();
