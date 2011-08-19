@@ -1,6 +1,7 @@
 package <%= package_name %>
 {
 	import asunit.asserts.*;
+	import flash.events.EventDispatcher;
 	
 	public class <%= class_name %>
 	{
