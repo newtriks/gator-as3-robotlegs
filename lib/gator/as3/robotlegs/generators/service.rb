@@ -15,7 +15,7 @@ module Gator
         end
 
         def generate
-         @class_name += "Service" unless input.match(/Service$/)
+         @class_name += "Service" unless @class_name.match(/Service$/)
          super
         end
         

@@ -15,7 +15,7 @@ module Gator
         end
 
         def generate
-         @class_name += "Command" unless input.match(/Command$/)
+         @class_name += "Command" unless @class_name.match(/Command$/)
          super
         end
 
