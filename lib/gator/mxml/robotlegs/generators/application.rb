@@ -5,6 +5,7 @@ module Gator
         include Gator::Project
         include WithRobotLegsTemplates
         include ActAsRobotLegsKlassGenerator
+        include ActAsMXMLKlassGenerator
 
         define :command => "application", :short => "app",
                :usage => "generate RobotLegs mxml application CLASS_NAME", :description => "Creates RobotLegs mxml application."
