@@ -16,7 +16,7 @@ module Gator
           end
 
           def generate
-            @class_name += "CommandTest"
+            @class_name += @class_name.match(/Command$/) && "Test" || "CommandTest"
             super
           end
 

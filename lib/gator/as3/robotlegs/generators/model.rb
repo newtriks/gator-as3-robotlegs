@@ -15,7 +15,7 @@ module Gator
        end
 
        def generate
-        @class_name += "Model"
+        @class_name += "Model" unless input.match(/Model$/)
         super
        end
        

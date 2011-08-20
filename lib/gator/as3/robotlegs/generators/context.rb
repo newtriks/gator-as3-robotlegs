@@ -14,7 +14,7 @@ module Gator
        end
 
        def generate
-         @class_name += "Context"
+         @class_name += "Context" unless input.match(/Context$/)
          super
        end
        

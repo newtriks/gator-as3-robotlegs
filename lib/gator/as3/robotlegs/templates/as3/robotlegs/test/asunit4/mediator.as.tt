@@ -5,7 +5,6 @@ package <%= package_name %>
 	import flash.events.EventDispatcher;
 
 	import org.robotlegs.adapters.SwiftSuspendersInjector;
-	import org.robotlegs.mvcs.Mediator;
 	
 	import <%= view_package_name %>.<%= view_class_name %>;
 	

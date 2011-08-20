@@ -18,7 +18,7 @@ module Gator
             @view_package_name = @package_name.dup << ".components" unless @package_name == ""
             @view_class_name = @class_name.dup
             @package_name += ".mediators" unless @package_name == ""
-            @class_name += "MediatorTest"
+            @class_name += @class_name.match(/Mediator$/) && "Test" || "MediatorTest"
            super
           end
 
