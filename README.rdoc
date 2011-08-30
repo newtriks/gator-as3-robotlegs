@@ -55,7 +55,7 @@ For ASUnit4 test generators add:
 
 === test
 	
-<b>For a the test class only prepend the generator command with 'test'</b> <i>Generates test/MainExampleCommandTest.as test/AllTests.as create  test/ASUnit4Runner.as</i>:
+<b>For a the test class only prepend the generator command with 'test'</b> <i>Generates test/MainExampleCommandTest.as test/AllTests.as test/ASUnit4Runner.as</i>:
 
 <tt>gator g as3 rl test command MainExample</tt>
 		
