@@ -12,61 +12,63 @@ For ASUnit4 test generators add:
 == List of commands
 
 For a class that extends org.robotlegs.mvcs.Context:
-	gator g as3 rl context com.funk.Application
+	typewriter:gator g as3 rl context com.funk.Application
 	
-_Generates src/com/funk/ApplicationContext.as_
+Generates src/com/funk/ApplicationContext.as
 
 For a class that extends org.robotlegs.mvcs.Command: 
 	gator g as3 rl command com.funk.controller.Startup
 
-_Generates src/com/funk/controller/StartupCommand.as_
+Generates src/com/funk/controller/StartupCommand.as
 		
 For a class that extends org.robotlegs.mvcs.Mediator: 
 	gator g as3 rl mediator com.funk.views.ExampleView		
 
-_Generates src/com/funk/views/mediators/ExampleViewMediator.as_
+Generates src/com/funk/views/mediators/ExampleViewMediator.as
 
 For a class that extends flash.display.Sprite: 
 	gator g as3 rl view com.funk.views.Example
 
-_Generates src/com/funk/views/components/Example.as_
+Generates src/com/funk/views/components/Example.as
 
 For a class that extends flash.display.Sprite + a class that extends org.robotlegs.mvcs.Mediator: 
 	gator g as3 rl view_with_mediator com.funk.views.Example
 
-_Generates src/com/funk/views/mediators/ExampleMediator.as + src/com/funk/views/components/Example.as_
+Generates src/com/funk/views/mediators/ExampleMediator.as + src/com/funk/views/components/Example.as
 
 For a class that extends org.robotlegs.mvcs.Actor: 
 	gator g as3 rl model com.funk.models.Example
 
-_Generates src/com/funk/models/ExampleModel.as_
+Generates src/com/funk/models/ExampleModel.as
 	
 For a class that extends org.robotlegs.mvcs.Actor: 
 	gator g as3 rl service com.funk.services.Example
 
-_Generates src/com/funk/services/ExampleService.as_
+Generates src/com/funk/services/ExampleService.as
 
 === mxml
 
 For a class that extends s:Application: 
 	gator g mxml rl app Main		
 
-_Generates src/Main.mxml_
+Generates src/Main.mxml
 
 For a class that extends s:Module: 
 	gator g mxml rl module com.funk.module.one.Example
-_Generates src/com/funk/module/one/Example.mxml_
+	
+Generates src/com/funk/module/one/Example.mxml
 
 For a class that extends s:Module: 
 	gator g mxml rl module_application com.funk.module.one.Example
-_Generates src/com/funk/module/one/Example.mxml_
+
+Generates src/com/funk/module/one/Example.mxml
 	
 === test
 	
 For a the test class only prepend the generator command with 'test': 
 	gator g as3 rl test command MainExample
 
-_Generates test/MainExampleCommandTest.as test/AllTests.as create  test/ASUnit4Runner.as_
+Generates test/MainExampleCommandTest.as test/AllTests.as create  test/ASUnit4Runner.as
 
 		
 == Contributing to gator-as3-robotlegs
