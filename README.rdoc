@@ -13,43 +13,43 @@ For ASUnit4 test generators add:
 
 <b>For a class that extends org.robotlegs.mvcs.Context:</b>
 
-<tt>gator g as3 rl context com.funk.Application</tt>
+		<tt>gator g as3 rl context com.funk.Application</tt>
 	
 <i>Generates src/com/funk/ApplicationContext.as</i>
 
 <b>For a class that extends org.robotlegs.mvcs.Command:</b>
 
-<tt>gator g as3 rl command com.funk.controller.Startup</tt>
+		<tt>gator g as3 rl command com.funk.controller.Startup</tt>
 
 <i>Generates src/com/funk/controller/StartupCommand.as</i>
 		
 <b>For a class that extends org.robotlegs.mvcs.Mediator:</b>
 
-<tt>gator g as3 rl mediator com.funk.views.ExampleView	</tt>	
+		<tt>gator g as3 rl mediator com.funk.views.ExampleView	</tt>	
 
 <i>Generates src/com/funk/views/mediators/ExampleViewMediator.as</i>
 
 <b>For a class that extends flash.display.Sprite:</b>
 
-<tt>gator g as3 rl view com.funk.views.Example</tt>
+		<tt>gator g as3 rl view com.funk.views.Example</tt>
 
 <i>Generates src/com/funk/views/components/Example.as</i>
 
 <b>For a class that extends flash.display.Sprite + a class that extends org.robotlegs.mvcs.Mediator:</b>
 	
-<tt>gator g as3 rl view_with_mediator com.funk.views.Example</tt>
+		<tt>gator g as3 rl view_with_mediator com.funk.views.Example</tt>
 
 <i>Generates src/com/funk/views/mediators/ExampleMediator.as + src/com/funk/views/components/Example.as</i>
 
 <b>For a class that extends org.robotlegs.mvcs.Actor:</b>
 
-<tt>gator g as3 rl model com.funk.models.Example</tt>
+		<tt>gator g as3 rl model com.funk.models.Example</tt>
 
 <i>Generates src/com/funk/models/ExampleModel.as</i>
 	
 <b>For a class that extends org.robotlegs.mvcs.Actor:</b>
 
-<tt>gator g as3 rl service com.funk.services.Example</tt>
+		<tt>gator g as3 rl service com.funk.services.Example</tt>
 
 <i>Generates src/com/funk/services/ExampleService.as</i>
 
@@ -57,19 +57,19 @@ For ASUnit4 test generators add:
 
 <b>For a class that extends s:Application:</b> 
 
-<tt>gator g mxml rl app Main</tt>
+		<tt>gator g mxml rl app Main</tt>
 
 <i>Generates src/Main.mxml</i>
 
 <b>For a class that extends s:Module:</b>
 
-<tt>gator g mxml rl module com.funk.module.one.Example</tt>
+		<tt>gator g mxml rl module com.funk.module.one.Example</tt>
 	
 <i>Generates src/com/funk/module/one/Example.mxml</i>
 
 <b>For a class that extends s:Module:</b>
 
-<tt>gator g mxml rl module_application com.funk.module.one.Example</tt>
+		<tt>gator g mxml rl module_application com.funk.module.one.Example</tt>
 
 <i>Generates src/com/funk/module/one/Example.mxml</i>
 	
@@ -77,7 +77,7 @@ For ASUnit4 test generators add:
 	
 <b>For a the test class only prepend the generator command with 'test':</b>
 
-<tt>gator g as3 rl test command MainExample</tt>
+		<tt>gator g as3 rl test command MainExample</tt>
 
 <i>Generates test/MainExampleCommandTest.as test/AllTests.as create  test/ASUnit4Runner.as</i>
 
