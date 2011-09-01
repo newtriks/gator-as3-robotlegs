@@ -9,6 +9,56 @@ For FlexUnit4 test generators add:
 For ASUnit4 test generators add:
     require "gator/as3/robotlegs/generators/test/asunit4"
 
+== List of commands
+
+* <b>For a class that extends org.robotlegs.mvcs.Context</b> <i>Generates src/com/funk/ApplicationContext.as</i>:
+
+<tt>gator g as3 rl context com.funk.Application</tt>
+
+* <b>For a class that extends org.robotlegs.mvcs.Command</b> <i>Generates src/com/funk/controller/StartupCommand.as</i>:
+
+<tt>gator g as3 rl command com.funk.controller.Startup</tt>
+		
+* <b>For a class that extends org.robotlegs.mvcs.Mediator</b> <i>Generates src/com/funk/views/mediators/ExampleViewMediator.as</i>:
+
+<tt>gator g as3 rl mediator com.funk.views.ExampleView</tt>	
+
+* <b>For a class that extends flash.display.Sprite</b> <i>Generates src/com/funk/views/components/Example.as</i>:
+
+<tt>gator g as3 rl view com.funk.views.Example</tt>
+
+* <b>For a class that extends flash.display.Sprite + a class that extends org.robotlegs.mvcs.Mediator</b> <i>Generates src/com/funk/views/mediators/ExampleMediator.as + src/com/funk/views/components/Example.as</i>:
+	
+<tt>gator g as3 rl view_with_mediator com.funk.views.Example</tt>
+
+* <b>For a class that extends org.robotlegs.mvcs.Actor</b> <i>Generates src/com/funk/models/ExampleModel.as</i>:
+
+<tt>gator g as3 rl model com.funk.models.Example</tt>
+	
+* <b>For a class that extends org.robotlegs.mvcs.Actor</b> <i>Generates src/com/funk/services/ExampleService.as</i>:
+
+<tt>gator g as3 rl service com.funk.services.Example</tt>
+
+=== mxml
+
+* <b>For a class that extends s:Application</b> <i>Generates src/Main.mxml</i>:
+
+<tt>gator g mxml rl app Main</tt>
+
+* <b>For a class that extends s:Module</b> <i>Generates src/com/funk/module/one/Example.mxml</i>:
+
+<tt>gator g mxml rl module com.funk.module.one.Example</tt>
+	
+* <b>For a class that extends s:Module</b> <i>Generates src/com/funk/module/one/Example.mxml</i>:
+
+<tt>gator g mxml rl module_application com.funk.module.one.Example</tt>
+
+=== test
+	
+<b>For a the test class only prepend the generator command with 'test'</b> <i>Generates test/MainExampleCommandTest.as test/AllTests.as test/ASUnit4Runner.as</i>:
+
+<tt>gator g as3 rl test command MainExample</tt>
+		
 == Contributing to gator-as3-robotlegs
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
@@ -23,4 +73,3 @@ For ASUnit4 test generators add:
 
 Copyright (c) 2011 devboy. See LICENSE.txt for
 further details.
-

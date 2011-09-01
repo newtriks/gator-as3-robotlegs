@@ -1,0 +1,31 @@
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               minWidth="800"
+               minHeight="600"
+               width="1024"
+               height="768"
+               backgroundColor="0xFFFFFF"
+               pageTitle="<%= class_name %>"
+               usePreloader="true"
+ 			   applicationComplete="on<%= class_name %>Complete()">
+	<fx:Style> 
+	    @namespace s "library://ns.adobe.com/flex/spark";  
+	</fx:Style>
+    <fx:Declarations>
+        <context:<%= class_name %>Context contextView="{<%= class_name.gsub(/\B[A-Z]/, '_\&').downcase %>_view}" />
+    </fx:Declarations>
+	<s:layout>
+        <s:BasicLayout/>
+    </s:layout>
+	<fx:Script>
+        <![CDATA[             
+             protected function on<%= class_name %>Complete():void
+             {
+                 trace("<%= class_name %>.mxml :: on<%= class_name %>Complete()");
+             }
+         ]]>
+    </fx:Script>
+	<views:<%= class_name %>View id="<%= class_name.gsub(/\B[A-Z]/, '_\&').downcase %>_view" />
+</s:Application>
+

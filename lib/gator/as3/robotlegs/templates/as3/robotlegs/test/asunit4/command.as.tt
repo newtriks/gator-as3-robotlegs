@@ -1,41 +1,36 @@
 package <%= package_name %>
 {
 	import asunit.asserts.*;
-
-	import flash.display.Sprite;
-
-    public class <%= class_name %>
-    {
-		[Inject]
-	    public var context:Sprite;
-	    
+	import flash.events.EventDispatcher;
+	
+	public class <%= class_name %>
+	{
 		private var instance:<%= instance_name %>;
-
+		
 		[Before]
 		public function setUp():void
 		{
 		    instance=new <%= instance_name %>();
-		    context.addChild(instance);
+		    instance.eventDispatcher=new EventDispatcher();
 		}
-
+		
 		[After]
 		public function tearDown():void
 		{
-		    context.removeChild(instance);
-		    instance=null;
-		    context=null;
-		}
+			instance=null;
+    	}
 
 		[Test]
 		public function should_be_instantiated():void
 		{
-		    assertTrue(instance is <%= instance_name %>);
+			assertTrue(instance is <%= instance_name %>);
 		}
-		
+
 		[Test]
 		public function should_fail():void
 		{
 		    assertTrue(false);
 		}
-    }
+		
+	}
 }
