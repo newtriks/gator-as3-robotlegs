@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gator-as3-robotlegs}
-  s.version = "0.0.2.pre"
+  s.version = "0.0.3.pre"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["devboy", "newtriks"]
-  s.date = %q{2011-08-16}
+  s.date = %q{2011-09-01}
   s.description = %q{Gator Generators for RobotLegs}
   s.email = %q{simon@newtriks.com}
   s.extra_rdoc_files = [
@@ -25,32 +25,41 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "gator-as3-robotlegs.gemspec",
+    "gator-as3-robotlegs.tmproj",
     "lib/gator/as3/robotlegs/generators.rb",
     "lib/gator/as3/robotlegs/generators/collection.rb",
-    "lib/gator/as3/robotlegs/generators/command.as.tt",
     "lib/gator/as3/robotlegs/generators/command.rb",
-    "lib/gator/as3/robotlegs/generators/context.as.tt",
     "lib/gator/as3/robotlegs/generators/context.rb",
-    "lib/gator/as3/robotlegs/generators/mediator.as.tt",
+    "lib/gator/as3/robotlegs/generators/generator.rb",
     "lib/gator/as3/robotlegs/generators/mediator.rb",
-    "lib/gator/as3/robotlegs/generators/model.as.tt",
     "lib/gator/as3/robotlegs/generators/model.rb",
-    "lib/gator/as3/robotlegs/generators/service.as.tt",
     "lib/gator/as3/robotlegs/generators/service.rb",
     "lib/gator/as3/robotlegs/generators/test/asunit4.rb",
     "lib/gator/as3/robotlegs/generators/test/asunit4/collection.rb",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/command.as.tt",
     "lib/gator/as3/robotlegs/generators/test/asunit4/command.rb",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/mediator.as.tt",
     "lib/gator/as3/robotlegs/generators/test/asunit4/mediator.rb",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/runner.as.tt",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/suite.as.tt",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/suite.rb",
-    "lib/gator/as3/robotlegs/generators/test/asunit4/view.as.tt",
     "lib/gator/as3/robotlegs/generators/test/asunit4/view.rb",
-    "lib/gator/as3/robotlegs/generators/view.as.tt",
     "lib/gator/as3/robotlegs/generators/view.rb",
     "lib/gator/as3/robotlegs/generators/view_with_mediator.rb",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/command.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/context.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/mediator.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/model.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/service.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/test/asunit4/command.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/test/asunit4/mediator.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/test/asunit4/view.as.tt",
+    "lib/gator/as3/robotlegs/templates/as3/robotlegs/view.as.tt",
+    "lib/gator/mxml/robotlegs/generators.rb",
+    "lib/gator/mxml/robotlegs/generators/application.rb",
+    "lib/gator/mxml/robotlegs/generators/collection.rb",
+    "lib/gator/mxml/robotlegs/generators/generator.rb",
+    "lib/gator/mxml/robotlegs/generators/module.rb",
+    "lib/gator/mxml/robotlegs/generators/module_application.rb",
+    "lib/gator/mxml/robotlegs/templates/mxml/application.mxml.tt",
+    "lib/gator/mxml/robotlegs/templates/mxml/module.mxml.tt",
+    "lib/gator/mxml/robotlegs/templates/mxml/module_application.mxml.tt",
     "spec/gator.rb",
     "spec/generators/collection_spec.rb",
     "spec/generators/command_spec.rb",
@@ -67,38 +76,35 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<gator>, ["~> 0.0.20.pre"])
+      s.add_runtime_dependency(%q<gator>, ["~> 0.0.21.pre"])
       s.add_runtime_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<ci_reporter>, ["~> 1.6.5"])
-      s.add_development_dependency(%q<gator>, ["~> 0.0.20.pre"])
+      s.add_development_dependency(%q<gator>, ["~> 0.0.21.pre"])
       s.add_development_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
     else
-      s.add_dependency(%q<gator>, ["~> 0.0.20.pre"])
+      s.add_dependency(%q<gator>, ["~> 0.0.21.pre"])
       s.add_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-      s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<ci_reporter>, ["~> 1.6.5"])
-      s.add_dependency(%q<gator>, ["~> 0.0.20.pre"])
+      s.add_dependency(%q<gator>, ["~> 0.0.21.pre"])
       s.add_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
     end
   else
-    s.add_dependency(%q<gator>, ["~> 0.0.20.pre"])
+    s.add_dependency(%q<gator>, ["~> 0.0.21.pre"])
     s.add_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
-    s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<ci_reporter>, ["~> 1.6.5"])
-    s.add_dependency(%q<gator>, ["~> 0.0.20.pre"])
+    s.add_dependency(%q<gator>, ["~> 0.0.21.pre"])
     s.add_dependency(%q<gator-as3>, ["~> 0.0.7.pre"])
   end
 end
