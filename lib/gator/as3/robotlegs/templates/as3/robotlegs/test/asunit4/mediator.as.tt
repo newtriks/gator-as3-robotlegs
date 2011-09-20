@@ -3,8 +3,6 @@ package <%= package_name %>
 	import asunit.asserts.*;
 	
 	import flash.events.EventDispatcher;
-
-	import org.robotlegs.adapters.SwiftSuspendersInjector;
 	
 	import <%= view_package_name %>.<%= view_class_name %>;
 	
@@ -17,7 +15,6 @@ package <%= package_name %>
 		{
 		    instance=new <%= instance_name %>();
 			instance.view=new <%= view_class_name %>();
-			instance.view.parentInjector=new SwiftSuspendersInjector();
 			instance.setViewComponent(instance.view);
 		    instance.eventDispatcher=new EventDispatcher();
 			instance.onRegister();
